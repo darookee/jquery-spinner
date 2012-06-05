@@ -29,6 +29,7 @@
           
       // attach buttons to input 
       $inc.live('click', function(){
+        value = parseInt($readout.val(), 10);
         if (value < max) {
           value += step;
           if( value > max ) {
@@ -39,6 +40,7 @@
       });
       
       $dec.live('click', function(){
+        value = parseInt($readout.val(), 10);
         if (value > min) {
           value -= step;
           if( value < min ) {
